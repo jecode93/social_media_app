@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_media_app/widgets/curve_clipper.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -21,22 +22,24 @@ class _LoginScreenState extends State<LoginScreen> {
           height: hContainer,
           child: Column(
             children: [
-              Image(
-                height: hContainer / 2.5,
-                image: AssetImage(loginImage),
-                fit: BoxFit.cover,
-                width: double.infinity,
+              ClipPath(
+                clipper: CurveClipper(),
+                child: Image(
+                  height: hContainer / 2.5,
+                  image: AssetImage(loginImage),
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                ),
               ),
               Container(
                 child: Column(
                   children: [
                     Text(
-                      'JEC Social',
+                      'SS - Social Share',
                       style: TextStyle(
                         color: Theme.of(context).primaryColor,
                         fontSize: 34.0,
                         fontWeight: FontWeight.bold,
-                        letterSpacing: 1.0,
                       ),
                     ),
                     SizedBox(
