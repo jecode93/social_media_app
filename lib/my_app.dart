@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-
-import 'screens/home.dart';
+import 'package:social_media_app/screens/login.dart';
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter App',
+      title: 'Flutter Social UI',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primaryColor: Colors.blue,
       ),
-      home: Home(title: 'JEC social'),
+      home: LoginScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
