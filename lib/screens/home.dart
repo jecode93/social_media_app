@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_media_app/screens/following_users.dart';
 
 class Home extends StatefulWidget {
   Home({Key? key, required this.title}) : super(key: key);
@@ -39,15 +40,9 @@ class _HomeState extends State<Home> {
           ),
           backgroundColor: Colors.white,
         ),
-        drawer: Drawer(),
-        body: TabBarView(
+        body: ListView(
           children: [
-            Center(
-              child: Text('Screen 1'),
-            ),
-            Center(
-              child: Text('Screen 2'),
-            ),
+            FollowingUsers(),
           ],
         ),
       ),
