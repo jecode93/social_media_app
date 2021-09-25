@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_media_app/screens/home.dart';
 import 'package:social_media_app/widgets/curve_clipper.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -83,9 +84,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 40.0,
                     ),
                     ElevatedButton(
-                      onPressed: () {
-                        print('Button Tap');
-                      },
+                      onPressed: () => Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => Home(title: 'SS - Social Share'),
+                        ),
+                      ),
                       child: Text('Login'),
                       style: ElevatedButton.styleFrom(
                         textStyle: TextStyle(
