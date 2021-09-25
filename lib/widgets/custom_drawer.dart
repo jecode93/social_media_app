@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:social_media_app/data/data.dart';
 import 'package:social_media_app/screens/home.dart';
 import 'package:social_media_app/screens/login.dart';
+import 'package:social_media_app/screens/profile_screen.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);
@@ -101,7 +102,14 @@ class CustomDrawer extends StatelessWidget {
           _buildDrawerOption(
             Icon(Icons.account_circle),
             'Your Profile',
-            () {},
+            () => Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (_) => ProfileScreen(
+                  user: currentUser,
+                ),
+              ),
+            ),
           ),
           _buildDrawerOption(
             Icon(Icons.settings),
