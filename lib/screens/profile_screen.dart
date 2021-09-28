@@ -48,8 +48,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
               top: 50.0,
               left: 20.0,
               child: IconButton(
-                onPressed: () {},
-                // _scaffoldKey.currentState!.openDrawer(),
+                onPressed: () {
+                  _scaffoldKey.currentState!.openDrawer();
+                },
                 icon: Icon(Icons.menu),
                 color: Theme.of(context).primaryColor,
               ),
