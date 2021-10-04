@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   children: [
                     Text(
-                      'SS - Social Share',
+                      'SS -Social Share',
                       style: TextStyle(
                         color: Theme.of(context).primaryColor,
                         fontSize: 34.0,
@@ -87,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       onPressed: () => Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (_) => Home(title: 'SS - Social Share'),
+                          builder: (_) => Home(title: 'SS -Social Share'),
                         ),
                       ),
                       child: Text('Login'),
